@@ -1,13 +1,24 @@
 "use client";
 import { ShoppingBagIcon } from "lucide-react";
 import { Badge } from "./badge";
-import { useContext, useState } from "react";
+import { Fragment, useContext, useState } from "react";
 import { CartContext, CartProduct } from "@/providers/cart";
 import CartItem from "./cart-item";
 import { ScrollArea } from "./scroll-area";
+import { Button } from "./button";
+import Link from "next/link";
+import { SheetClose } from "./sheet";
+import { Separator } from "./separator";
 
-const Cart = () => {
-  const { products } = useContext(CartContext);
+interface CartProps {
+  withSheetClose?: boolean;
+}
+const Cart = ({ withSheetClose }: CartProps) => {
+  const { products, total } = useContext(CartContext);
+  const [SheetCloseWrapper, shetCloseWrapperProps] = withSheetClose
+    ? [SheetClose, { asChild: true }]
+    : [Fragment, {}];
+
   return (
     <div className="flex h-full flex-col gap-8">
       <div className="flex flex-row justify-between pr-3">
@@ -35,6 +46,20 @@ const Cart = () => {
           )}
         </div>
       </ScrollArea>
+      {products.length > 0 && (
+        <div className="flex flex-col">
+          <Separator />
+          <div className="flex items-center justify-between py-5 text-sm font-bold">
+            <p>Total</p>
+            <p>R$ {total.toFixed(2)}</p>
+          </div>
+          <SheetCloseWrapper {...shetCloseWrapperProps}>
+            <Link href="/checkout">
+              <Button className="btn btn-primary">Ir para o checkout</Button>
+            </Link>
+          </SheetCloseWrapper>
+        </div>
+      )}
     </div>
   );
 };

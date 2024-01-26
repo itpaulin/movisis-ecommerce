@@ -7,15 +7,18 @@ import { Button } from "./button";
 import { CartContext } from "@/providers/cart";
 import { useContext } from "react";
 import { Badge } from "./badge";
+import Link from "next/link";
 
 const Header = () => {
   const { products } = useContext(CartContext);
   return (
     <div className="mb-10 flex justify-between px-6 pt-7 text-center">
       <ModeToggle />
-      <h1 className="text-lg font-semibold ">
-        <span className="text-primary">Movisis</span> Ecommerce
-      </h1>
+      <Link href="/">
+        <h1 className="text-lg font-semibold ">
+          <span className="text-primary">Movisis</span> Ecommerce
+        </h1>
+      </Link>
       <Sheet>
         <SheetTrigger asChild>
           <Button size="icon" variant="outline">
@@ -29,7 +32,7 @@ const Header = () => {
           </Button>
         </SheetTrigger>
         <SheetContent side="right">
-          <Cart />
+          <Cart withSheetClose />
         </SheetContent>
       </Sheet>
     </div>
