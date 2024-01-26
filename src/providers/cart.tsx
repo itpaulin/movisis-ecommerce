@@ -1,7 +1,7 @@
 "use client";
 import { Product } from "@prisma/client";
 import { Preahvihear } from "next/font/google";
-import { ReactNode, createContext, useEffect, useState } from "react";
+import { ReactNode, createContext, useEffect, useMemo, useState } from "react";
 
 export interface CartProduct extends Product {
   quantity: number;
@@ -14,6 +14,7 @@ interface ICartContext {
   removeProductToCart: (product: CartProduct) => void;
   increaseQuantity: (product: CartProduct) => void;
   decreaseQuantity: (product: CartProduct) => void;
+  total: number;
 }
 
 export const CartContext = createContext<ICartContext>({
@@ -23,6 +24,7 @@ export const CartContext = createContext<ICartContext>({
   removeProductToCart: () => {},
   increaseQuantity: () => {},
   decreaseQuantity: () => {},
+  total: 0,
 });
 
 const CartProvider = ({ children }: { children: ReactNode }) => {
@@ -76,6 +78,11 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
       });
     });
   };
+  const total = useMemo(() => {
+    return products.reduce((acc: number, curr: CartProduct) => {
+      return acc + Number(curr.price) * curr.quantity;
+    }, 0);
+  }, [products]);
   return (
     <CartContext.Provider
       value={{
@@ -85,6 +92,7 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
         increaseQuantity,
         decreaseQuantity,
         cartTotalPrice: 0,
+        total,
       }}
     >
       {children}
