@@ -7,7 +7,7 @@ export default async function Home() {
   const products = await prismaClient.product.findMany();
 
   return (
-    <div>
+    <div className="px-10">
       <ProductList products={products} />
     </div>
   );
