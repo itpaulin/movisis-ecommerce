@@ -99,7 +99,7 @@ const ProductList = ({ products }: ProductListProps) => {
           />
         </div>
       )}
-      <div className="grid grid-cols-2 gap-3 pt-4 md:grid-cols-6">
+      <div className="grid grid-cols-2 gap-3 pt-4 md:grid-cols-4 lg:grid-cols-6">
         {filteredProducts.map((product) => (
           <ProductItem key={product.id} product={product} />
         ))}
