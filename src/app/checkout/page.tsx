@@ -25,28 +25,33 @@ const Checkout = () => {
   };
   return (
     <div>
-      {showAlert && (
-        <Alert>
-          <CheckCheckIcon className="h-4 w-4" />
-          <AlertTitle>Compra realizada com sucesso!</AlertTitle>
-          <AlertDescription>
-            Redirecionando voce para a pagina inicial em 5 segundos...
-          </AlertDescription>
-        </Alert>
-      )}
-      <div className="m-8 flex flex-col gap-y-6 rounded-lg border p-8">
-        {products.map((product: CartProduct) => (
-          <CheckoutItem product={product} />
-        ))}
-        <Separator />
-        <div className="flex items-center justify-between py-5 text-lg font-bold">
-          <p>Total</p>
-          <p>R$ {total.toFixed(2)}</p>
+      {showAlert ? (
+        <div className="flex flex-col items-center p-10">
+          <Alert className="w-[700px] text-center">
+            <CheckCheckIcon className="h-6 w-6" />
+            <AlertTitle>Compra realizada com sucesso!</AlertTitle>
+            <AlertDescription>
+              Redirecionando voce para a pagina inicial em 5 segundos...
+            </AlertDescription>
+          </Alert>
         </div>
-      </div>
-      <div className="flex justify-center">
-        <Button onClick={handleFinishPurchase}>Finalizar a compra</Button>
-      </div>
+      ) : (
+        <div>
+          <div className="m-8 flex flex-col gap-y-6 rounded-lg border p-8">
+            {products.map((product: CartProduct) => (
+              <CheckoutItem product={product} />
+            ))}
+            <Separator />
+            <div className="flex items-center justify-between py-5 text-lg font-bold">
+              <p>Total</p>
+              <p>R$ {total.toFixed(2)}</p>
+            </div>
+          </div>
+          <div className="flex justify-center">
+            <Button onClick={handleFinishPurchase}>Finalizar a compra</Button>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
