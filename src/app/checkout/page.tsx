@@ -34,7 +34,7 @@ const Checkout = () => {
           </AlertDescription>
         </Alert>
       )}
-      <div className="m-8 flex flex-col rounded-lg border p-8">
+      <div className="m-8 flex flex-col gap-y-6 rounded-lg border p-8">
         {products.map((product: CartProduct) => (
           <CheckoutItem product={product} />
         ))}
@@ -44,7 +44,9 @@ const Checkout = () => {
           <p>R$ {total.toFixed(2)}</p>
         </div>
       </div>
-      <Button onClick={handleFinishPurchase}>Finalizar a compra</Button>
+      <div className="flex justify-center">
+        <Button onClick={handleFinishPurchase}>Finalizar a compra</Button>
+      </div>
     </div>
   );
 };
