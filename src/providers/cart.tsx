@@ -30,7 +30,11 @@ export const CartContext = createContext<ICartContext>({
 });
 
 const CartProvider = ({ children }: { children: ReactNode }) => {
-  const [products, setProducts] = useState<CartProduct[]>([]);
+  const [products, setProducts] = useState<CartProduct[]>(
+    JSON.parse(
+      localStorage.getItem("@ecommerce-movisis/cart-products") || "[]",
+    ),
+  );
   const addProductToCart = (product: CartProduct) => {
     if (products.some((cartProduct) => cartProduct.id === product.id)) {
       setProducts((prev) =>
@@ -88,6 +92,14 @@ const CartProvider = ({ children }: { children: ReactNode }) => {
       return acc + Number(curr.price) * curr.quantity;
     }, 0);
   }, [products]);
+
+  useEffect(() => {
+    localStorage.setItem(
+      "@ecommerce-movisis/cart-products",
+      JSON.stringify(products),
+    );
+  }, [products]);
+
   return (
     <CartContext.Provider
       value={{
