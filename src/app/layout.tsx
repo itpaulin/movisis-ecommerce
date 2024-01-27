@@ -32,6 +32,7 @@ export default function RootLayout({
           <CartProvider>
             <Header />
             {children}
+            <br className="pb-10" />
           </CartProvider>
         </ThemeProvider>
       </body>
