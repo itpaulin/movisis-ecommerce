@@ -32,7 +32,10 @@ const ProductList = ({ products }: ProductListProps) => {
       (product) =>
         product.name.toLowerCase().includes(filter.toLowerCase()) ||
         product.price.toString() === filter ||
-        new Date(product.inclusionDate).toLocaleDateString() === filter,
+        String(product.inclusionDate)
+          .slice(4, 15)
+          .toLowerCase()
+          .startsWith(filter.toLowerCase()),
     )
     .sort((a, b) => {
       if (sort === "SmallerToBiggest") {
