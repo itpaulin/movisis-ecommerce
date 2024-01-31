@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Teste técnico MOVISIS
 
-## Getting Started
+## Descrição
 
-First, run the development server:
+Este projeto é um mini ecommerce construído com TypeScript, React, NextJS, ContextAPI, TailwindCSS, Shadcn UI, Prisma ORM, PostgreSQL e Supabase. Ele apresenta um carrinho funcional, checkout, exibição de produtos e a possibilidade de filtrar e ordená-los. O projeto é 100% responsivo.
+
+## Instalação e Uso com Docker
+
+1. Clone o repositório para a sua máquina local.
+2. Na raiz do projeto, você encontrará um arquivo Dockerfile. Você receberá um arquivo docker-compose.yml separadamente com as variáveis de ambiente e configurações necessárias.
+3. Construa a imagem e inicie o container Docker com o comando `docker compose up -d`
+4. Acesse a aplicação em `http://localhost:3000`
+
+## Instalação e Uso sem Docker
+
+### Gerenciador de Pacotes
+
+Este projeto usa o [PNPM](https://pnpm.io/) como gerenciador de pacotes padrão.
+Você deve instala-lo com o seguinte comando:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install -g pnpm
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Após isso :
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Clone o repositório para a sua máquina local.
+2. Na raiz do projeto, digite no terminal `pnpm install`.
+3. Coloque o arquivo chamado '.env' recebido por e-mail no diretório raiz do projeto.
+4. Inicie a aplicação, `pnpm dev`
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Tecnologias Utilizadas
 
-## Learn More
+- **TypeScript**: Usado como a principal linguagem de programação.
+- **React com NextJS**: Usado para construir a interface do usuário.
+- **ContextAPI**: Usado para gerenciar o estado da aplicação.
+- **TailwindCSS**: Usado para estilização, atuando como um pré-processador CSS.
+- **Shadcn UI**: Usado para componentes de UI.
+- **Prisma ORM**: Usado para gerenciar, popular e acessar o banco de dados.
+- **PostgreSQL**: Usado como o banco de dados principal.
+- **Supabase**: Usado para hospedagem do banco de dados.
 
-To learn more about Next.js, take a look at the following resources:
+## Funcionalidades
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- **Responsividade**: O projeto é 100% responsivo.
+- **Carrinho**: O carrinho é totalmente funcional.
+- **Checkout**: A funcionalidade de checkout está implementada.
+- **Exibição de Produtos**: Os produtos são exibidos e os usuários têm a possibilidade de filtrar e ordená-los.
