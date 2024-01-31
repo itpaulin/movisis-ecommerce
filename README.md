@@ -4,7 +4,7 @@
 
 Este projeto é um mini ecommerce construído com TypeScript, React, NextJS, ContextAPI, TailwindCSS, Shadcn UI, Prisma ORM, PostgreSQL e Supabase. Ele apresenta um carrinho funcional, checkout, exibição de produtos e a possibilidade de filtrar e ordená-los. O projeto é 100% responsivo.
 
-## Instalação e Uso com Docker
+## Instalação e Uso com Docker - (Principal opção)
 
 1. Clone o repositório para a sua máquina local.
 2. Na raiz do projeto, você encontrará um arquivo Dockerfile. Você receberá um arquivo docker-compose.yml separadamente com as variáveis de ambiente e configurações necessárias.
