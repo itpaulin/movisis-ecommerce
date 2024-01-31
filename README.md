@@ -7,7 +7,7 @@ Este projeto é um mini ecommerce construído com TypeScript, React, NextJS, Con
 ## Instalação e Uso com Docker - (Principal opção)
 
 1. Clone o repositório para a sua máquina local.
-2. Na raiz do projeto, você encontrará um arquivo Dockerfile. Você receberá um arquivo docker-compose.yml separadamente com as variáveis de ambiente e configurações necessárias.
+2. Você receberá um arquivo docker-compose.yml separadamente com as variáveis de ambiente e configurações necessárias. Coloque-a na raiz do projeto
 3. Construa a imagem e inicie o container Docker com o comando `docker compose up -d`
 4. Acesse a aplicação em `http://localhost:3000`
 
