@@ -53,15 +53,16 @@ const Cart = ({ withSheetClose }: CartProps) => {
             <p>Total</p>
             <p>R$ {total.toFixed(2)}</p>
           </div>
-          <SheetCloseWrapper {...shetCloseWrapperProps}>
-            <div className="flex justify-center">
-              <Link href="/checkout">
+
+          <div className="flex justify-center">
+            <Link href="/checkout">
+              <SheetCloseWrapper {...shetCloseWrapperProps}>
                 <Button className="btn btn-primary" variant="secondary">
                   Ir para o checkout
                 </Button>
-              </Link>
-            </div>
-          </SheetCloseWrapper>
+              </SheetCloseWrapper>
+            </Link>
+          </div>
         </div>
       )}
     </div>
