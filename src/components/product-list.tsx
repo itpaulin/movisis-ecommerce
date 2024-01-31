@@ -3,15 +3,15 @@
 import { Product } from "@prisma/client";
 import ProductItem from "./product-item";
 import { useEffect, useState } from "react";
-import { Button } from "./button";
+import { Button } from "./ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "./dropdown-menu";
+} from "./ui/dropdown-menu";
 import { ArrowsUpFromLine, ListFilterIcon, ListOrdered } from "lucide-react";
-import { Input } from "./input";
+import { Input } from "./ui/input";
 
 interface ProductListProps {
   products: Product[];

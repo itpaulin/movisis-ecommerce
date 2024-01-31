@@ -1,14 +1,14 @@
 "use client";
 import { ShoppingBagIcon } from "lucide-react";
-import { Badge } from "./badge";
+import { Badge } from "./ui/badge";
 import { Fragment, useContext, useState } from "react";
 import { CartContext, CartProduct } from "@/providers/cart";
 import CartItem from "./cart-item";
-import { ScrollArea } from "./scroll-area";
-import { Button } from "./button";
+import { ScrollArea } from "./ui/scroll-area";
+import { Button } from "./ui/button";
 import Link from "next/link";
-import { SheetClose } from "./sheet";
-import { Separator } from "./separator";
+import { SheetClose } from "./ui/sheet";
+import { Separator } from "./ui/separator";
 
 interface CartProps {
   withSheetClose?: boolean;

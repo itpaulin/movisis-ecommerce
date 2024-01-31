@@ -2,7 +2,7 @@
 import { Product } from "@prisma/client";
 import Image from "next/image";
 import { useContext, useState } from "react";
-import { Button } from "./button";
+import { Button } from "./ui/button";
 import { ShoppingBasketIcon } from "lucide-react";
 import { CartContext } from "@/providers/cart";
 

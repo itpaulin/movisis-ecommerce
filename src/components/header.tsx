@@ -1,12 +1,12 @@
 "use client";
 import { ShoppingCart } from "lucide-react";
 import Cart from "./cart";
-import { ModeToggle } from "./mode-toggle";
-import { Sheet, SheetContent, SheetTrigger } from "./sheet";
-import { Button } from "./button";
+import { ModeToggle } from "./ui/mode-toggle";
+import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Button } from "./ui/button";
 import { CartContext } from "@/providers/cart";
 import { useContext } from "react";
-import { Badge } from "./badge";
+import { Badge } from "./ui/badge";
 import Link from "next/link";
 
 const Header = () => {

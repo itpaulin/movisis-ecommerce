@@ -1,5 +1,5 @@
-import ProductItem from "@/components/ui/product-item";
-import ProductList from "@/components/ui/product-list";
+import ProductItem from "@/components/product-item";
+import ProductList from "@/components/product-list";
 import { prismaClient } from "@/lib/prisma";
 import Image from "next/image";
 

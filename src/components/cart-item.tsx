@@ -1,7 +1,7 @@
 import { CartContext, CartProduct } from "@/providers/cart";
 import { Minus, Plus, Trash } from "lucide-react";
 import Image from "next/image";
-import { Button } from "./button";
+import { Button } from "./ui/button";
 import { useContext } from "react";
 interface CartItemProps {
   product: CartProduct;
