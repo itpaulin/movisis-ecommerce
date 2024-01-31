@@ -33,8 +33,9 @@ Após isso :
 
 ## Tecnologias Utilizadas
 
-- **TypeScript**: Usado como a principal linguagem de programação.
-- **React com NextJS**: Usado para construir a interface do usuário.
+- **TypeScript**: Usado como a principal e única linguagem de programação.
+- **React**: Framework javascript usado para construir interfaces web.
+- **NextJS**: Um framework React que oferece renderização do lado do servidor (SSR), App Router, etc...
 - **ContextAPI**: Usado para gerenciar o estado da aplicação.
 - **TailwindCSS**: Usado para estilização, atuando como um pré-processador CSS.
 - **Shadcn UI**: Usado para componentes de UI.
@@ -44,7 +45,7 @@ Após isso :
 
 ## Funcionalidades
 
-- **Responsividade**: O projeto é 100% responsivo.
-- **Carrinho**: O carrinho é totalmente funcional.
-- **Checkout**: A funcionalidade de checkout está implementada.
+- **Carrinho**: O carrinho cumpre todas as finalidades.
+- **Checkout**: O checkout cumpre todas as finalidades.
 - **Exibição de Produtos**: Os produtos são exibidos e os usuários têm a possibilidade de filtrar e ordená-los.
+- **Responsividade**: O projeto esta responsivo para dispositivos mobile e desktop.
