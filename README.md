@@ -27,7 +27,9 @@ Após isso :
 1. Clone o repositório para a sua máquina local.
 2. Na raiz do projeto, digite no terminal `pnpm install`.
 3. Coloque o arquivo chamado '.env' recebido por e-mail no diretório raiz do projeto.
-4. Inicie a aplicação, `pnpm dev`
+4. Execute o comando para criar a conexão com banco de dados `pnpm prisma generate`
+5. Inicie a aplicação, `pnpm dev`
+6. Acesse a aplicação em `http://localhost:3000`
 
 ## Tecnologias Utilizadas
 
